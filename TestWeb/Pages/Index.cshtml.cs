@@ -5,15 +5,17 @@ namespace TestWeb.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
+       public string Name { get; set; } 
+        public List<string> NamesList { get; set; }
 
         public void OnGet()
         {
+            Name = "Bootstrap";
+            NamesList = new List<string>(); 
+            NamesList.Add("Artem");
+            NamesList.Add("Artem");
+            NamesList.Add("Artem");
+            NamesList.Add("Artem");
 
         }
     }
